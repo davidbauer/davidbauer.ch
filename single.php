@@ -2,8 +2,8 @@
 <div class="wrapper whiteish" id="article">
 	<div class="content">
 		<article class="main">
-		<nav class="switch newer"><?php next_post_link('%link','«'); ?> </nav>
-		<nav class="switch older"><?php previous_post_link('%link','»'); ?> </nav>
+		<nav class="switch newer mobile-hide"><?php next_post_link('%link','«'); ?> </nav>
+		<nav class="switch older mobile-hide"><?php previous_post_link('%link','»'); ?> </nav>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<h3><?php the_title(); ?></h3>
 				<p class="date"><?php the_time('F j, Y') ?></p>

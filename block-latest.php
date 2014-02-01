@@ -3,7 +3,7 @@
 		<div class="g g6 gl centered">
 			<p class="large">Latest notes, recent work.</p>
 		</div>
-		<div class="g g1 gl"></div>
+		<div class="g g1 gl mobile-hide"></div>
 		<div class="g g2">
 			
 			<ul>

@@ -9,30 +9,33 @@
 	<div class="g g4">
 			<h2>Find me on the web</h2>
 		<nav class="centered">
-			<li class="selector">All</li>
-			<li class="selector">Most active</li>
-			<li class="selector">Coding</li>
-			<li class="selector">Curation</li>
+			<li><a class="selector selected" data-info="most-active">Most active</a></li>
+			<li><a class="selector" data-info="writing">Writing</a></li>
+			<li><a class="selector" data-info="coding">Coding</a></li>
+			<li><a class="selector" data-info="curation">Curation</a></li>
+			
 			
 		</nav>
 		
 		<ul class="icons">
-			<li><a href="http://www.twitter.com/davidbauer" class="ic-twitter connect glow"></a></li>
-			<li><a href="http://www.facebook.com/davidbauer" class="ic-facebook connect glow"></a></li>
-			<li><a href="http://www.github.com/davidbauer" class="ic-github coding"></a></li>
-			<li><a href="http://endofjournalism.tumblr.com" class="ic-tumblr curation"></a></li>
-			<li><a href="http://www.kippt.com/davidbauer" class="ic-kippt curation"></a></li>
-			<li><a href="http://www.foursquare.com/davidbauer" class="ic-foursquare"></a></li>
-			<li><a href="http://www.storify.com/davidbauer" class="ic-storify curation"></a></li>
-			<li><a href="http://open.spotify.com/user/davidbauer" class="ic-spotify curation"></a></li>
-			<li><a href="http://www.reddit.com/u/davidbauer" class="ic-reddit"></a></li>
-			<li><a rel="me" href="http://www.google.com/+DavidBauerCH" class="ic-googleplus"></a></li>
-			<li><a href="http://www.quora.com/David-Bauer-1" class="ic-quora"></a></li>
-			<li><a href="http://www.medium.com/@davidbauer" class="ic-medium"></a></li>
-			<li><a href="https://flattr.com/profile/davidbauer" class="ic-flattr"></a></li>
-			<li><a href="http://www.speakerdeck.com/davidbauer" class="ic-speakerdeck"></a></li>
-			<li><a href="http://www.codecademy.com/davidbauer" class="ic-codecademy"></a></li>
-			<li><a href="https://de.wikipedia.org/wiki/Benutzer:DavidbauerCH" class="ic-wikipedia"></a></li>
+			<li><a href="http://www.twitter.com/davidbauer" class="ic-twitter most-active curation glow" title="Twitter"></a></li>
+			<li><a href="http://www.storify.com/davidbauer" class="ic-storify curation" title="Storify"></a></li>
+			<li><a href="http://www.codecademy.com/davidbauer" class="ic-codecademy coding" title="Codecademy"></a></li>
+			<li><a href="http://www.foursquare.com/davidbauer" class="ic-foursquare curation" title="Foursquare"></a></li>
+			<li><a href="http://www.github.com/davidbauer" class="ic-github coding" title="Github"></a></li>
+			<li><a href="http://www.facebook.com/davidbauer" class="ic-facebook connect curation most-active glow" title="Facebook"></a></li>
+			<li><a href="http://endofjournalism.tumblr.com" class="ic-tumblr curation writing" title="Tumblr: The End of Journalism in the Digital Age"></a></li>
+			<li><a href="http://open.spotify.com/user/davidbauer" class="ic-spotify curation" title="Spotify"></a></li>
+			<li><a href="http://www.tageswoche.ch/user/profile/David%20Bauer" class="ic-tageswoche writing most-active glow" title="TagesWoche"></a></li>
+			<li><a href="http://www.speakerdeck.com/davidbauer" class="ic-speakerdeck" title="Speakerdeck"></a></li>			
+			<li><a href="https://flattr.com/profile/davidbauer" class="ic-flattr" title="Flattr"></a></li>
+			<li><a href="http://www.reddit.com/u/davidbauer" class="ic-reddit curation" title="Reddit"></a></li>
+			<li><a href="http://www.kippt.com/davidbauer" class="ic-kippt curation" title="Kippt"></a></li>
+			<li><a rel="me" href="http://www.google.com/+DavidBauerCH" class="ic-googleplus" title="Google+"></a></li>
+			<li><a href="http://www.quora.com/David-Bauer-1" class="ic-quora" title="Quora"></a></li>
+			<li><a href="http://www.medium.com/@davidbauer" class="ic-medium writing" title="Medium"></a></li>	
+			<li><a href="https://de.wikipedia.org/wiki/Benutzer:DavidbauerCH" class="ic-wikipedia" title="Wikipedia"></a></li>
+			
 		</ul>		
 		
 	

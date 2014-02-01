@@ -24,9 +24,12 @@ $(window).scroll(function(){
     if($('header').data('size') == 'big')
     {
         $('header').data('size','small');
-        $('header').stop().animate({
+        if ($(window).width() > 468) {$('header').stop().animate({
             height:'70px'
-        },400);
+        },400);}
+        else {$('header').stop().animate({
+            height:'94px'
+        },400);}
         $('header p').stop().fadeOut(400);
         $('.logo').data('size','small');
         $('.logo').stop().animate({
@@ -39,9 +42,14 @@ else
     if($('header').data('size') == 'small')
       {
         $('header').data('size','big');
-        $('header').stop().animate({
+        if ($(window).width() > 468) {$('header').stop().animate({
             height:'120px'
+        },400);}
+        else {
+	        $('header').stop().animate({
+            height:'140px'
         },400);
+        }
         $('header p').stop().fadeIn(400);
         $('.logo').data('size','big');
         $('.logo').stop().animate({
@@ -112,8 +120,9 @@ function browse(items) {
 	// show all items in smaller grid
 	$('#teasers').html("");
 	for (i=0; i<items.length;i++) {
-		if (i%6 == 0) {teaser = "<div class='clear'><article class='g g1 gl'><a href='" + items[i].url + "'><img src='" + items[i].img + "' title='" + items[i].title + "' alt='" + items[i].title + "'></a></article>";}
-		else {teaser = "</div><article class='g g1'><a href='" + items[i].url + "'><img src='" + items[i].img + "' title='" + items[i].title + "' alt='" + items[i].title + "'></a></article>";}
+		smallimage = items[i].img.replace(".png","-s.png");
+		if (i%6 == 0) {teaser = "<div class='clear'><article class='g g1 gl'><a href='" + items[i].url + "'><img src='" + smallimage + "' title='" + items[i].title + "' alt='" + items[i].title + "'></a></article>";}
+		else {teaser = "</div><article class='g g1'><a href='" + items[i].url + "'><img src='" + smallimage + "' title='" + items[i].title + "' alt='" + items[i].title + "'></a></article>";}
 		$('#teasers').fadeIn(500).append(teaser);	
 	}	
 }
@@ -123,6 +132,18 @@ function showcase(items) {
 	$('#teasers').html("<article class='g g3 gl pf0'></article><article class='g g3 pf1'></article>");
 	loadPortfolio();
 }
+
+ $(function() {
+	$('.selector').click (function(e) {
+		e.preventDefault();
+		var selection = $(this).attr('data-info');
+		var $sel = 'a.' + selection;
+		$('.selector').removeClass('selected');
+		$(this).addClass('selected');
+		$('ul.icons li a').removeClass('glow');
+		$('ul.icons li').find($sel).addClass('glow');
+	});
+  });
 
 
 /* optional triggers
