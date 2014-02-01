@@ -1,0 +1,157 @@
+@import '../bourbon/bourbon';
+@import 'reset';
+$fenix: 'Fenix', 'Merriweather', 'Times New Roman', serif;
+$merriweather: 'Merriweather', 'Fenix', 'Times New Roman', serif;
+$steel: #323f48;
+$accent: #df765a;
+
+@include keyframes(move) {
+  from {
+    @include transform(translateX(-30px));
+  }
+  to {
+    @include transform(translateX(30px));
+  }
+}
+
+.container {
+    @include transition ( all 0.7s );
+    opacity: 0;
+    margin: 60px auto;
+    text-align: center;
+    max-width: 600px;
+    padding: 0 20px;
+    &.active { opacity: 1; }
+    &.modal_open {
+        pointer-events: none;
+        -webkit-filter: blur(2px);
+    }
+    h3 {
+        color: $steel;
+        font-family: $merriweather;
+        font-size: 36px;
+        font-style: italic;
+        text-transform: lowercase;
+        &:after {
+            display: block;
+            margin: 20px auto 35px auto;
+            background: lighten($steel, 60%);
+            content: '';
+            height: 4px;
+            position: relative;
+            text-align: center;
+            width: 10%;
+        }
+    }
+    .clips {
+        font-family: $fenix;
+        font-size: 24px;
+        .clip {
+            margin: 25px 0;
+            a {
+                @include transition ( all 0.7s );
+                color: $accent;
+                text-decoration: none;
+                &:hover {
+                    color: darken($accent, 15%);
+                }
+            }
+            .url_domain {
+                font-size: 18px;
+                margin-top: 10px;
+                a {
+                    @include transition ( all 0.7s );
+                    color: #ddd;
+                    text-decoration: none;
+                    &:hover {
+                        color: lighten($steel, 50%);
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        color: #ddd;
+        font-family: $merriweather;
+        font-size: 14px;
+        line-height: 18px;
+        font-style: italic;
+        margin-top: 60px;
+        text-align: center;
+        a {
+            @include transition ( all 0.7s );
+            color: $accent;
+            text-decoration: none;
+            &:hover {
+                color: darken($accent, 15%);
+            }
+        }
+    }
+}
+
+.about_modal {
+    @include backface-visibility(hidden);
+    @include transition ( all 0.7s );
+    @include transform(scale(0.85));
+    background: #fff;
+    border: 1px solid #ddd;
+    font-family: $fenix; 
+    opacity: 0;
+    padding: 25px;
+    position: fixed; top: 50%; left: 50%;
+    margin-top: -125px; margin-left: -200px;
+    text-align: center; 
+    width: 400px; height: 250px;
+    z-index: -1;
+    &.active {
+        @include transform(scale(1));
+        opacity: 1;
+        z-index: 9999;
+    }
+
+    h3 {
+        color: $steel;
+        font-size: 24px;
+        margin: 20px 0;
+        font-weight: bold;
+    }
+
+    p {
+        color: darken(#ddd, 20%);
+        font-size: 16px;
+        line-height: 24px;
+        a {
+            @include transition ( all 0.7s );
+            color: $accent;
+            text-decoration: none;
+            &:hover {
+                color: darken($accent, 15%);
+            }
+        }
+    }
+}
+
+.loader {
+    @include animation(move 0.7s ease-in-out infinite);
+    @include animation-direction(alternate);
+    @include animation-fill-mode(both);
+    @include backface-visibility(hidden);
+    @include transition ( all 0.7s );
+    background: darken(#ddd, 20%);
+    border-radius: 20px;
+    margin-top: -10px; margin-left: -10px;
+    position: fixed; top: 50%; left: 50%;
+    width: 20px; height: 20px;
+    &.hidden { opacity: 0; }
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    .about_modal {
+        margin-top: -125px; margin-left: -150px;
+        
+        width: 300px; height: 250px;
+        z-index: -1;
+    }
+}
