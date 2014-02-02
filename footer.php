@@ -26,8 +26,8 @@
 
 <!-- this is where we put our custom functions -->
 <!-- don't forget to concatenate and minify if needed -->
-<script src="<?php bloginfo('template_url'); ?>/functions.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/functions.php"></script>
+<script type="application/javascript" src="<?php bloginfo('template_url'); ?>/functions.js"></script>
+<script type="application/javascript" src="<?php bloginfo('template_url'); ?>/functions.php"></script>
 
 <!-- External scripts: Twitter, Kippt-->
 

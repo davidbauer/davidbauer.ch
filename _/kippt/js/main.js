@@ -14,6 +14,7 @@
         var clips_list;
         $.get('http://www.davidbauer.ch/wp-content/themes/db14/_/kippt/kippt.php', function(res){
             clips_list = ich.clips_list(res);
+            $('.clips').html("");
             $('.clips').append(clips_list);
         }, 'json');
     };

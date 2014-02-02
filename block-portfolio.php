@@ -9,10 +9,10 @@
 		</div>
 		<section id="teasers">
 		<article class="g g3 gl pf0">
-			<a href=""><img src="http://www.davidbauer.ch/wp-content/uploads/2013/12/screenshot3-1024x577.png"></a>
+			<a href="http://www.youdontknowafrica.com"><img src="http://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/ydka.png"></a>
 		</article>
 		<article class="g g3 pf1">
-			<a href=""><img src="http://www.davidbauer.ch/wp-content/uploads/2013/08/Bildschirmfoto-2013-08-15-um-21.26.14-1024x632.png"></a>
+			<a href="http://labs.tageswoche.ch/geschichten/remittances"><img src="http://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/remittances.png"></a>
 		</article>
 		</section>
 		

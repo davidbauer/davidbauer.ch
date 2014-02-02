@@ -25,6 +25,8 @@
 
 <?php get_template_part( 'block', 'portfolio'); ?> 
 
-<?php get_template_part( 'block', 'connect'); ?> 
+<?php get_template_part( 'block', 'connect'); ?>
+
+<?php get_template_part( 'block', 'map'); ?>  
 
 <?php get_footer(); ?>

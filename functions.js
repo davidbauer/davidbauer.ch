@@ -69,6 +69,8 @@ $(function() {
         $('html,body').animate({
           scrollTop: target.offset().top
         }, 500);
+        document.location.hash=this.hash;
+        
         return false;
       }
     }

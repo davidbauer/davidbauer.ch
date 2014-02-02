@@ -22,7 +22,7 @@
 		<div class="g g2">
 		
 			<ul class="clips">
-				<!-- list elements are loaded via Kippt -->
+				<li>loading...</li><!-- list elements are loaded via Kippt -->
 			</ul>
 			<a href="https://kippt.com/davidbauer/work" class="external">More</a>
 		</div>

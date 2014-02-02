@@ -54,6 +54,8 @@
 	<!-- Facebook -->
 	<meta property="og:image" content="<?php echo catch_that_image() ?>"/>
 	<meta property="og:type" content="article"/> 
+	<meta property="og:description" content="<?php if (have_posts() && !is_home()): while (have_posts()): the_post(); echo strip_tags(get_the_excerpt()); endwhile; else: _e('David Bauer. Words | Code | Data.'); endif;?>">
+	<meta name="og:title" content="<?php wp_title(''); ?>">
 	<meta property="og:url" content="<?php the_permalink(); ?>" />
 	<meta property="og:site_name" content="David Bauer. Journalist."/>
 	<meta property="article:author" content="https://www.facebook.com/davidbauer" />
