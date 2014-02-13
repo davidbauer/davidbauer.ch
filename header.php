@@ -17,8 +17,8 @@
 	<title><?php wp_title(' | ', 'true','right'); ?>David Bauer</title>
 	
 	<meta name="title" content="<?php wp_title(' | ', 'true','right'); ?>David Bauer" />
-	<meta name="description" content="" />
-	<meta name="author" content="" />
+	<meta name="description" content="<?php if (have_posts() && !is_home()): while (have_posts()): the_post(); echo strip_tags(get_the_excerpt()); endwhile; else: _e('David Bauer. Words | Code | Data'); endif;?>" />
+	<meta name="author" content="David Bauer" />
 	<!-- Google will often use this as its description of your page/site. Make it good. -->
 	
 	<meta name="google-site-verification" content="NIQf1dkbS1GEEwBoNAr3FiSfoFRFZILdt0Ap1Hen0z4" />
@@ -27,34 +27,20 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
-	<!-- Iconifier might be helpful for generating favicons and touch icons: http://iconifier.net -->
-	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/_/img/favicon.ico" />
-	<!-- This is the traditional favicon.
-		 - size: 16x16 or 32x32
-		 - transparency is OK -->
-		 
-	<link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/_/img/apple-touch-icon.png" />
-	<!-- The is the icon for iOS's Web Clip and other things.
-		 - size: 57x57 for older iPhones, 72x72 for iPads, 114x114 for retina display (IMHO, just go ahead and use the biggest one)
-		 - To prevent iOS from applying its styles to the icon name it thusly: apple-touch-icon-precomposed.png
-		 - Transparency is not recommended (iOS will put a black BG behind the icon) -->
-	
+	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
+		 	
 	<!-- concatenate and minify for production -->
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/_/css/reset.css" />
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/_/css/style.css" />
 	<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
-	
-	<!-- Application-specific meta tags -->
-	<!-- Windows 8 -->
-	<meta name="application-name" content="" /> 
-	<meta name="msapplication-TileColor" content="" /> 
-	<meta name="msapplication-TileImage" content="" />
+	<link rel="stylesheet" href="http://www.davidbauer.ch/_rsrc/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
 	
 	<!-- Facebook -->
 	<meta property="og:image" content="<?php echo catch_that_image() ?>"/>
 	<meta property="og:type" content="article"/> 
-	<meta property="og:description" content="<?php if (have_posts() && !is_home()): while (have_posts()): the_post(); echo strip_tags(get_the_excerpt()); endwhile; else: _e('David Bauer. Words | Code | Data.'); endif;?>">
+	<meta property="og:description" content="<?php if (have_posts() && !is_home()): while (have_posts()): the_post(); echo strip_tags(get_the_excerpt()); endwhile; else: _e('David Bauer. Words | Code | Data'); endif;?>">
 	<meta name="og:title" content="<?php wp_title(''); ?>">
 	<meta property="og:url" content="<?php the_permalink(); ?>" />
 	<meta property="og:site_name" content="David Bauer. Journalist."/>
@@ -62,13 +48,13 @@
 	<meta property="og:app_id" content="153576157369"/> 
 	
 	<!-- Twitter -->
-	<meta name="twitter:card" content="summary">
+	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:creator" content="@davidbauer">
 	<meta name="twitter:url" content="<?php the_permalink(); ?>">
 	<meta name="twitter:title" content="<?php wp_title(''); ?>">
 	<meta name="twitter:description" content="<?php if (have_posts() && !is_home()): while (have_posts()): the_post(); echo strip_tags(get_the_excerpt()); endwhile; else: _e('David Bauer. Journalist.'); endif;?>">
-	<meta name="twitter:image" content="<?php echo catch_that_image() ?>">
-	<meta property="twitter:account_id" content="1510086864" />
+	<meta name="twitter:image:src" content="<?php echo catch_that_image() ?>">
+	<meta property="twitter:domain" content="davidbauer.ch" />
 
 <?php wp_head(); ?>
 

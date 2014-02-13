@@ -1,4 +1,4 @@
-<footer>
+<footer id="footer">
 		<div class="content">
 		<div class="g g1 gl mobile-hide"></div>
 		<div class="g g4 centered">
@@ -24,12 +24,10 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write("<script src='<?php bloginfo('template_url'); ?>/_/js/jquery-1.10.2.min.js'>\x3C/script>")</script>
 
-<!-- this is where we put our custom functions -->
-<!-- don't forget to concatenate and minify if needed -->
 <script type="application/javascript" src="<?php bloginfo('template_url'); ?>/functions.js"></script>
 <script type="application/javascript" src="<?php bloginfo('template_url'); ?>/functions.php"></script>
 
-<!-- External scripts: Twitter, Kippt-->
+<!-- External scripts: Twitter, Kippt, Leaflet, Stamen-->
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
@@ -41,6 +39,10 @@
         <li><a href="{{url}}" target="_blank">{{title}}</a></li>
     {{/objects}}
 </script>
+
+<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+
+<script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.4"></script>
 
 <!-- Mailchimp -->
 <script type="text/javascript">
@@ -206,9 +208,38 @@
 			}
 			
 			</script>
+			
+<script type="text/javascript">
+// create a map in the "map" div, set the view to a given place and zoom
+var map = L.map('themap').setView([47.76,17.83], 4);
+var layer = new L.StamenTileLayer("watercolor");
 
-<!-- Asynchronous google analytics -->
-	 
+// add an OpenStreetMap tile layer
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+map.addLayer(layer);
+map.scrollWheelZoom.disable();
+
+var myIcon = L.icon({
+    iconUrl: 'http://www.davidbauer.ch/wp-content/themes/db14/_/img/dot.png',
+    iconRetinaUrl: 'http://www.davidbauer.ch/wp-content/themes/db14/_/img/dot.png',
+    iconSize: [30, 30]
+});
+
+// add a marker in the given location, attach some popup content to it and open the popup
+L.marker([51.5,-0.10], {icon: myIcon}).addTo(map) // london
+L.marker([43.1,12.37], {icon: myIcon}).addTo(map) // perugia
+L.marker([41.3,2.1], {icon: myIcon}).addTo(map) // barca
+L.marker([48.9,2.34], {icon: myIcon}).addTo(map) // paris
+L.marker([52.50,13.42], {icon: myIcon}).addTo(map) // berlin
+L.marker([47.5,7.59], {icon: myIcon}).addTo(map) // basel
+
+</script>
+
+
+<!-- Asynchronous google analytics -->	 
 <script>
 
   var _gaq = _gaq || [];

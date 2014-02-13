@@ -11,10 +11,6 @@
 <td>Basel</td>
 </tr>
 <tr>
-<td>5.2.-7.2.</td>
-<td>Geneva</td>
-</tr>
-<tr>
 <td>24.3.-5.4.</td>
 <td>Berlin</td>
 </tr>
@@ -31,16 +27,17 @@
 <td>Barcelona</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
+<td>18.-21.6.</td>
+<td>London</td>
 </tr>
 
 </table>
 		
 		
 		
-		</div>
-	
+		</div>	
+
+<!--<div id="themap"></div>-->
 
 <iframe width="100%" height="420" src="http://maps.stamen.com/watercolor/embed#4/47.76/17.83"></iframe>
 	
