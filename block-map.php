@@ -3,7 +3,7 @@
 
 <div class="g g6 gl maptop">
 		
-		<p class="medium">Where to meet me in person</p>
+		<p class="small">Where to meet me in person</p>
 		
 		<table class="itinerary">
 <tr>
@@ -34,16 +34,6 @@
 </table>
 		
 		
-		
-		</div>	
-
-<!--<div id="themap"></div>-->
-
-<iframe width="100%" height="420" src="http://maps.stamen.com/watercolor/embed#4/47.76/17.83"></iframe>
-	
-	
-	
-		
-
+</div>	
 
 </div>
