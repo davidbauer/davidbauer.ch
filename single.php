@@ -6,7 +6,16 @@
 		<nav class="switch older mobile-hide"><?php previous_post_link('%link','»'); ?> </nav>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<h3><?php the_title(); ?></h3>
-				<p class="date"><?php the_time('F j, Y') ?></p>
+				<p class="date">
+				<?php $u_time = get_the_time('U'); 
+					$u_modified_time = get_the_modified_time('U'); 
+					the_time('F j, Y');  
+					if ($u_modified_time >= $u_time + 86400) { 
+						echo " (updated on "; 
+						the_modified_time('F j, Y'); 
+						echo ")"; }
+				?>
+				</p>
 				<?php the_content(__('Read the rest of this post','min').' &raquo;'); ?>
 
 		<?php comments_template(); ?>
