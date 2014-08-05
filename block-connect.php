@@ -1,4 +1,4 @@
-<div class="wrapper six" id="connect">
+<div class="wrapper rust" id="connect">
 	<div class="content">
 		<div class="g g2 gl centered">
 			<h2>Get in touch</h2>

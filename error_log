@@ -1,0 +1,7 @@
+[19-Mar-2014 21:10:06 Europe/Zurich] PHP Fatal error:  Call to undefined function get_header() in /home/schreibl/public_html/wp-content/themes/db14/index.php on line 1
+[19-Mar-2014 21:10:41 Europe/Zurich] PHP Fatal error:  Call to undefined function get_header() in /home/schreibl/public_html/wp-content/themes/db14/index.php on line 1
+[22-Mar-2014 08:04:26 Europe/Zurich] PHP Fatal error:  Call to undefined function get_header() in /home/schreibl/public_html/wp-content/themes/db14/index.php on line 1
+[23-Mar-2014 18:11:30 Europe/Zurich] PHP Fatal error:  Call to undefined function get_header() in /home/schreibl/public_html/wp-content/themes/db14/index.php on line 1
+[23-Mar-2014 18:12:00 Europe/Zurich] PHP Fatal error:  Call to undefined function get_header() in /home/schreibl/public_html/wp-content/themes/db14/index.php on line 1
+[23-Mar-2014 18:12:47 Europe/Zurich] PHP Fatal error:  Call to undefined function get_header() in /home/schreibl/public_html/wp-content/themes/db14/index.php on line 1
+[03-Apr-2014 12:27:02 Europe/Zurich] PHP Fatal error:  Call to undefined function get_header() in /home/schreibl/public_html/wp-content/themes/db14/index.php on line 1

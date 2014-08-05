@@ -1,4 +1,4 @@
-<div class="wrapper five" id="portfolio">
+<div class="wrapper bordeaux" id="portfolio">
 	
 	<div class="content">
 		<div class="g g6 gl centered">

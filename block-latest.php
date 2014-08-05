@@ -1,4 +1,4 @@
-<div class="wrapper three" id="latest">
+<div class="wrapper lightblue" id="latest">
 	<div class="content">
 		<div class="g g6 gl centered">
 			<p class="large">Latest notes, recent work.</p>

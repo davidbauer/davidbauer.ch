@@ -45,7 +45,8 @@
 	<meta property="og:url" content="<?php the_permalink(); ?>" />
 	<meta property="og:site_name" content="David Bauer. Journalist."/>
 	<meta property="article:author" content="https://www.facebook.com/davidbauer" />
-	<meta property="og:app_id" content="153576157369"/> 
+	<meta property="og:app_id" content="153576157369"/>
+	<meta property="fb:admins" content="1306692262" />
 	
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image">
@@ -66,7 +67,7 @@
 		
 		<a rel="author" href="/" alt="David Bauer"><img class="logo" src="<?php bloginfo('template_url'); ?>/_/img/lelogo.png"></a>
 		
-		<p>Journalist. Digital strategist for TagesWoche.</p>
+		<p>Journalist. Looking for the next big challenge.</p>
 
 		<nav>
 		
