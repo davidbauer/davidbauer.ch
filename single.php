@@ -35,6 +35,8 @@
 
 <?php get_template_part( 'block', 'instacurate'); ?> 
 
+<?php get_template_part( 'block', 'dystopia'); ?> 
+
 <?php get_template_part( 'block', 'book'); ?> 
 
 <?php get_template_part( 'block', 'portfolio'); ?> 

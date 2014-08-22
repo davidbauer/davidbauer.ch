@@ -53,6 +53,7 @@ html {background: rgba(88,243,204,0.98);}
 .whiteish a:hover {color: #fff; background: #333;}
 
 #book {background: url(http://www.davidbauer.ch/wp-content/themes/db14/_/img/book-inside.png) no-repeat center center;height:400px;background-size: cover;color:#fff;}
+
 #map {background-color: #333;padding:0;height:420px;position: relative;}
 
 .grey {background: rgba(233,233,233,1);}
@@ -61,6 +62,7 @@ html {background: rgba(88,243,204,0.98);}
 .lightblue {background:rgba(155,203,227,1);}
 .teal {background: rgba(15,89,113,1);color:#cecece;}
 .rust {background:#6E3D4E;}
+.beige {background:#E8E8DE;}
 
 footer {background: #333;color:#cecece;font-size: 75%;}
 
@@ -201,7 +203,7 @@ p.credit {color:#636363;text-align: right;margin-top: -20px;font-size: 0.85em;}
 }
 
 .ic-github {
-	background-color: #4183C4;
+	background-color: #606060;
 	background-image: url(http://www.davidbauer.ch/_rsrc/icons/github/github-64.png);	
 }
 
@@ -269,6 +271,10 @@ p.credit {color:#636363;text-align: right;margin-top: -20px;font-size: 0.85em;}
 	background-image: url(http://www.davidbauer.ch/_rsrc/icons/tageswoche/tageswoche-64.png);	
 }
 
+.ic-instagram {
+	background-color: #5681be;
+	background-image: url(http://www.davidbauer.ch/_rsrc/icons/instagram/instagram-64.png);	
+}
 
 /* Glow
 -------------------------------------------------------------------------------*/
