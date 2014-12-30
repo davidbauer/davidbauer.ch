@@ -27,15 +27,15 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
-	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
+	<link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/favicon.ico" />
 		 	
 	<!-- concatenate and minify for production -->
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/_/css/reset.css" />
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/_/css/style.css" />
+	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/_/css/reset.css" />
+	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/_/css/style.css" />
 	<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="http://www.davidbauer.ch/_rsrc/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/_/js/leaflet/leaflet.css" />
+	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/_/js/leaflet/leaflet.css" />
 	
 	<!-- Facebook -->
 	<meta property="og:image" content="<?php echo catch_that_image() ?>"/>
@@ -68,7 +68,7 @@
 
 <header class="header centered">
 		
-		<a rel="author" href="/" alt="David Bauer"><img class="logo" src="<?php bloginfo('template_url'); ?>/_/img/lelogo.png"></a>
+		<a rel="author" href="/" alt="David Bauer"><img class="logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/_/img/lelogo.png"></a>
 		
 		<p>Journalist. Looking for the next big challenge.</p>
 

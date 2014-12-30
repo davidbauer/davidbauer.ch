@@ -22,17 +22,17 @@
 
 <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>window.jQuery || document.write("<script src='<?php bloginfo('template_url'); ?>/_/js/jquery-1.10.2.min.js'>\x3C/script>")</script>
+<script>window.jQuery || document.write("<script src='<?php echo esc_url( get_template_directory_uri() ); ?>/_/js/jquery-1.10.2.min.js'>\x3C/script>")</script>
 
-<script type="application/javascript" src="<?php bloginfo('template_url'); ?>/functions.js"></script>
-<script type="application/javascript" src="<?php bloginfo('template_url'); ?>/functions.php"></script>
+<script type="application/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/functions.js"></script>
+<script type="application/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/functions.php"></script>
 
 <!-- External scripts: Twitter, Kippt, Leaflet, Stamen, Embed.ly-->
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-<script defer type="text/javascript" src="<?php bloginfo('template_url'); ?>/_/kippt/js/icanhaz.min.js"></script>
-<script defer type="text/javascript" src="<?php bloginfo('template_url'); ?>/_/kippt/js/main.js"></script>
+<script defer type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/_/kippt/js/icanhaz.min.js"></script>
+<script defer type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/_/kippt/js/main.js"></script>
 
 <script id="clips_list" type="text/html">
     {{#objects}}
@@ -40,9 +40,9 @@
     {{/objects}}
 </script>
 
-<script defer type="text/javascript" src="<?php bloginfo('template_url'); ?>/_/kippt/js/main.js"></script>
+<script defer type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/_/kippt/js/main.js"></script>
 
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/_/js/headroom.min.js"></script>
+<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/_/js/headroom.min.js"></script>
 <script type=text/javascript>
 	// grab an element
 	var elem = document.querySelector("header");
@@ -59,15 +59,15 @@
 </script>
 
 
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/_/js/bigfoot/bigfoot.js"></script>
+<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/_/js/bigfoot/bigfoot.js"></script>
 <script type="text/javascript">
     $.bigfoot();
 </script>
 
 
-<script src="<?php bloginfo('template_url'); ?>/_/js/leaflet/leaflet.js"></script>
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/_/js/leaflet/leaflet.js"></script>
 
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/_/js/stamen.js"></script>
+<script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/_/js/stamen.js"></script>
 
 <script>!function(a){var b="embedly-platform",c="script";if(!a.getElementById(b)){var d=a.createElement(c);d.id=b,d.src=("https:"===document.location.protocol?"https":"http")+"://cdn.embedly.com/widgets/platform.js";var e=document.getElementsByTagName(c)[0];e.parentNode.insertBefore(d,e)}}(document);</script>
 
