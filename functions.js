@@ -14,6 +14,7 @@
 /* trigger when page is ready */
 $(document).ready(function (){
 
+/*
 $(function(){
   $('header').data('size','big');
 });
@@ -58,6 +59,7 @@ else
       }  
   }
 });
+*/
 
 // smooth scrolling animation
 $(function() {
@@ -81,7 +83,6 @@ $(function() {
 loadPortfolio();
 
 });
-
 
 function loadPortfolio() {
   $.getJSON( "http://www.davidbauer.ch/wp-content/themes/db14/portfolio.json", function( data ) {
@@ -146,7 +147,6 @@ function showcase(items) {
 		$('ul.icons li').find($sel).addClass('glow');
 	});
   });
-
 
 /* optional triggers
 

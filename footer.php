@@ -40,11 +40,34 @@
     {{/objects}}
 </script>
 
-<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+<script defer type="text/javascript" src="<?php bloginfo('template_url'); ?>/_/kippt/js/main.js"></script>
 
-<script src="<?php bloginfo('template_url'); ?>/_/js/fragmention.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/_/js/headroom.min.js"></script>
+<script type=text/javascript>
+	// grab an element
+	var elem = document.querySelector("header");
+	// construct an instance of Headroom, passing the element
+	var headroom = new Headroom(elem, {
+		  "offset": 100,
+		  "tolerance": {
+		    "up": 0,
+		    "down": 0
+		  }
+		});
+	// initialise
+	headroom.init(); 
+</script>
 
-<script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.4"></script>
+
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/_/js/bigfoot/bigfoot.js"></script>
+<script type="text/javascript">
+    $.bigfoot();
+</script>
+
+
+<script src="<?php bloginfo('template_url'); ?>/_/js/leaflet/leaflet.js"></script>
+
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/_/js/stamen.js"></script>
 
 <script>!function(a){var b="embedly-platform",c="script";if(!a.getElementById(b)){var d=a.createElement(c);d.id=b,d.src=("https:"===document.location.protocol?"https":"http")+"://cdn.embedly.com/widgets/platform.js";var e=document.getElementsByTagName(c)[0];e.parentNode.insertBefore(d,e)}}(document);</script>
 
@@ -216,7 +239,7 @@
 <!-- create the leaflet map -->			
 <script type="text/javascript">
 // create a map in the "map" div, set the view to a given place and zoom
-var map = L.map('map').setView([47.76,17.83], 3);
+var map = L.map('map').setView([50,15], 4);
 var layer = new L.StamenTileLayer("watercolor");
 
 // add an OpenStreetMap tile layer
@@ -236,18 +259,17 @@ var myIcon = L.icon({
 // add a marker in the given location, attach some popup content to it and open the popup
 // http://www.latlong.net/
 // L.marker([51.5,-0.10], {icon: myIcon}).addTo(map) // london
-// L.marker([43.1,12.37], {icon: myIcon}).addTo(map) // perugia
+L.marker([43.1,12.37], {icon: myIcon}).addTo(map) // perugia
 // L.marker([41.3,2.1], {icon: myIcon}).addTo(map) // barca
 // L.marker([52.50,13.42], {icon: myIcon}).addTo(map) // berlin
 L.marker([47.5,7.59], {icon: myIcon}).addTo(map) // basel
-L.marker([48.21,16.37], {icon: myIcon}).addTo(map) // vienna
-L.marker([60.17,24.94], {icon: myIcon}).addTo(map) // helsinki
-L.marker([59.44,24.75], {icon: myIcon}).addTo(map) // tallinn
+// L.marker([48.21,16.37], {icon: myIcon}).addTo(map) // vienna
+// L.marker([60.17,24.94], {icon: myIcon}).addTo(map) // helsinki
+// L.marker([59.44,24.75], {icon: myIcon}).addTo(map) // tallinn
 L.marker([47.37,8.54], {icon: myIcon}).addTo(map) // zurich
 // L.marker([53.55,9.99], {icon: myIcon}).addTo(map) // hamburg
-
-
-
+//L.marker([63.43,10.40], {icon: myIcon}).addTo(map) // trondheim
+//L.marker([52.37,4.90], {icon: myIcon}).addTo(map) // amsterdam
 
 </script>
 

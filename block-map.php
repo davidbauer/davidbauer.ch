@@ -11,20 +11,12 @@
 <td>Basel</td>
 </tr>
 <tr>
-<td>8.-17.8.</td>
-<td>Vienna</td>
-</tr>
-<tr>
-<td>20.8.</td>
+<td>8.-12.12.</td>
 <td>Zürich</td>
 </tr>
 <tr>
-<td>11.-15.9.</td>
-<td>Helsinki</td>
-</tr>
-<tr>
-<td>22.-23.9.</td>
-<td>Tallinn</td>
+<td>15.-20.4.2015</td>
+<td>Perugia</td>
 </tr>
 
 </table>

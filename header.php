@@ -35,7 +35,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="http://www.davidbauer.ch/_rsrc/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/_/js/leaflet/leaflet.css" />
 	
 	<!-- Facebook -->
 	<meta property="og:image" content="<?php echo catch_that_image() ?>"/>
@@ -56,6 +56,9 @@
 	<meta name="twitter:description" content="<?php if (have_posts() && !is_home()): while (have_posts()): the_post(); echo strip_tags(get_the_excerpt()); endwhile; else: _e('David Bauer. Journalist.'); endif;?>">
 	<meta name="twitter:image:src" content="<?php echo catch_that_image() ?>">
 	<meta property="twitter:domain" content="davidbauer.ch" />
+	<link rel="me" href="https://twitter.com/davidbauer">
+	<meta name="twitter:dnt" content="on">
+	<meta name="twitter:widgets:csp" content="on">
 
 <?php wp_head(); ?>
 
@@ -63,7 +66,7 @@
 
 <body>
 
-<header class="centered">
+<header class="header centered">
 		
 		<a rel="author" href="/" alt="David Bauer"><img class="logo" src="<?php bloginfo('template_url'); ?>/_/img/lelogo.png"></a>
 		
