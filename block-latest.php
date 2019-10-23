@@ -1,13 +1,15 @@
 <div class="wrapper lightblue" id="latest">
 	<div class="content">
 		<div class="g g6 gl centered">
-			<p class="large">Latest notes, recent work.</p>
+			<p class="large">Latest notes</p>
 		</div>
-		<div class="g g1 gl mobile-hide"></div>
+		<div class="g g2 gl mobile-hide"></div>
 		<div class="g g2">
 			
+			<p>For more regular updates: <a class="external" href="https://www.davidbauer.ch">Twitter</a>.</p>
+			
 			<ul>
-				<?php query_posts(array('showposts' => 5, 'category_name' => 'Notizblock')); if (have_posts()): ?>
+				<?php query_posts(array('showposts' => 3, 'category_name' => 'Notizblock')); if (have_posts()): ?>
 					<?php while (have_posts()) : the_post(); ?>		
 						<li><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></li>
 					<?php endwhile; ?>
@@ -18,13 +20,6 @@
 				<?php endif; ?>
 				<a href="http://www.davidbauer.ch/category/notizblock/" class="external">More</a>
 			</ul>
-		</div>
-		<div class="g g2">
-		
-			<ul class="clips">
-				<li>loading...</li><!-- list elements are loaded via Kippt -->
-			</ul>
-			<a href="https://kippt.com/davidbauer/work" class="external">More</a>
 		</div>
 	</div>
 	<div class="clear"></div>

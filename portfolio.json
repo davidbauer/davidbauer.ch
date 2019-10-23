@@ -1,13 +1,170 @@
-[{"title":"You Dont Know Africa","publisher":"","url":"http://www.youdontknowafrica.com","img":"http://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/ydka.png"},
-{"title":"Milliarden aus der Fremde","publisher":"TagesWoche","url":"http://labs.tageswoche.ch/geschichten/remittances","img":"http://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/remittances.png"},
-{"title":"Most common birthdays","publisher":"TagesWoche","url":"http://www.tageswoche.ch/+bgkvj","img":"http://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/birthdays.png"},
-{"title":"Dichtestressomat","publisher":"TagesWoche","url":"http://www.tageswoche.ch/de/2014_02/schweiz/623953/die-ganze-schweizer-bevoelkerung-koennte-im-tessin-leben-wenn.htm","img":"http://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/dichtestressomat.png"},
-{"title":"Stadtgeflüster","publisher":"TagesWoche","url":"http://www.tageswoche.ch/de/2013_41/basel/578320/interaktive-karte-zeigen-sie-uns-die-verborgenen-seiten-von-basel.htm","img":"http://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/mapyourtown.png"},
-{"title":"60 Stunden Facebook","publisher":"Das Magazin","url":"http://blog.dasmagazin.ch/2012/05/10/60-stunden-facebook/","img":"http://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/fb.png"},
-{"title":"Tim Hetherington: I really don’t care about photography","publisher":"Flare","url":"http://flaremag.de/2011/09/in-memory-of-tim-hetherington-i-really-dont-care-about-photography/","img":"http://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/hetherington.jpg"},
-{"title":"Work at the Guardian Data Blog","publisher":"The Guardian","url":"http://www.davidbauer.ch/2013/04/22/datenjournalismus-beim-guardian-ein-augenschein/","img":"http://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/guardian.png"},
-{"title":"2000, The Year Formerly Known As The Future","publisher":"Medium","url":"https://medium.com/we-live-in-the-future/cbd6bdc6b283","img":"http://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/y2k.png"},
-{"title":"The End of Journalism in the Digital Age","publisher":"Tumblr","url":"endofjournalism.tumblr.com","img":"http://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/tumblr.png"},
-{"title":"Wie das Christkind anderswo heisst","publisher":"TagesWoche","url":"http://www.tageswoche.ch/de/2013_51/leben/620159/weihnachtszwerg-weihnachtsbock-wie-das-christkind-in-anderen-laendern-heisst.htm","img":"http://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/xmas.png"},
-{"title":"Interview with Erik Martin","publisher":"TagesWoche","url":"http://www.tageswoche.ch/de/2013_45/international/603066/you-are-not-in-control-and-that-s-a-positive-thing.htm","img":"http://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/reddit.png"},
-{"title":"Das Jahr in Zahlen","publisher":"TagesWoche","url":"http://labs.tageswoche.ch/geschichten/2013-in-zahlen","img":"http://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/2013-in-zahlen.png"}]
+[
+  {
+    "title": "NZZ Visuals",
+    "publisher": "NZZ",
+    "url": "https://www.nzz.ch/visuals",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/visuals.png",
+    "type": "Project"
+  },
+  {
+    "title": "A story of drinkers, genocide and unborn girls",
+    "publisher": "Quartz",
+    "url": "http://qz.com/335183/heres-why-men-on-earth-outnumber-women-by-60-million/",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/sexmap.png",
+    "type": "Story"
+  },
+  {
+    "title": "Why newsrooms need storytelling tools and what we’ve learnt building them",
+    "publisher": "Medium",
+    "url": "https://medium.com/@davidbauer/why-newsrooms-need-storytelling-tools-and-what-weve-learned-building-them-87df4802b737#.okfyt8vxt",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/q.png",
+    "type": "Writeup"
+  },
+  {
+    "title": "Milliarden aus der Fremde",
+    "publisher": "TagesWoche",
+    "url": "http://labs.tageswoche.ch/geschichten/remittances.html",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/remittances.png",
+    "type": "Story"
+  },
+  {
+    "title": "You Dont Know Africa",
+    "publisher": "",
+    "url": "http://www.youdontknowafrica.com",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/ydka.png",
+    "type": "Project"
+  },
+  {
+    "title": "Wie gut können Sie die Schweiz aus dem Gedächtnis zeichnen?",
+    "publisher": "NZZ",
+    "url": "https://www.nzz.ch/storytelling/geografie-kenntnisse-wie-gut-koennen-sie-die-schweiz-aus-dem-gedaechtnis-zeichnen-ld.1306768",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/schweizzeichnen.png",
+    "type": "Story"
+  },
+  {
+    "title": "2000 – The Year Formerly Known As The Future",
+    "publisher": "Medium",
+    "url": "https://medium.com/we-live-in-the-future/cbd6bdc6b283",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/y2k.png",
+    "type": "Story"
+  },
+  {
+    "title": "Dichtestressomat",
+    "publisher": "TagesWoche",
+    "url": "http://labs.davidbauer.ch/games/dichtestressomat/",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/dichtestressomat.png",
+    "type": "Story"
+  },
+  {
+    "title": "Midterms Results Overview",
+    "publisher": "NZZ",
+    "url": "https://www.nzz.ch/international/midterms-usa-resultate-im-ueberblick-ld.1431129",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/midterms.png",
+    "type": "Story"
+  },
+  {
+    "title": "Refind Climate",
+    "publisher": "Refind",
+    "url": "https://refind.com/davidbauer/climate-crisis",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/refind.png",
+    "type": "Project"
+  },
+  {
+    "title": "To compete with the web’s giants, news organisations need to become better at sending people away",
+    "publisher": "Medium",
+    "url": "https://medium.com/@davidbauer/to-compete-with-the-webs-giants-news-organisations-need-to-become-better-at-sending-people-away-6d0a38c4306d",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/webgiants.png",
+    "type": "Story"
+  },
+  {
+    "title": "Euro-Orakel",
+    "publisher": "NZZ",
+    "url": "https://www.nzz.ch/sport/euro-orakel-wer-wird-europameister-ld.17757",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/orakel.png",
+    "type": "Story"
+  },
+  {
+    "title": "78s – bessere Musik",
+    "publisher": "78s",
+    "url": "http://www.78s.ch",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/78s.png",
+    "type": "Project"
+  },
+  {
+    "title": "78songs – discover new music.",
+    "publisher": "",
+    "url": "http://www.78songs.com",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/78songs.png",
+    "type": "Project"
+  },
+  {
+    "title": "Dystopia Tracker",
+    "publisher": "Dystopia Tracker",
+    "url": "https://medium.com/@davidbauer/introducing-dystopia-tracker-18abfccded96",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/dystopiatracker.png",
+    "type": "Project"
+  },
+  {
+    "title": "Lionel Messi's efficiency: he runs fewer meters than any other forward in the Champions League [OC]",
+    "publisher": "Reddit",
+    "url": "https://www.reddit.com/r/dataisbeautiful/comments/89aruc/lionel_messis_efficiency_he_runs_fewer_meters/",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/messi.png",
+    "type": "Story"
+  },
+  {
+    "title": "Vertrauensserie",
+    "publisher": "NZZ",
+    "url": "https://www.nzz.ch/vertrauen/",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/vertrauen.png",
+    "type": "Project"
+  },
+  {
+    "title": "How I Learnt to Code in One Year",
+    "publisher": "davidbauer.ch",
+    "url": "https://www.davidbauer.ch/2013/01/02/how-i-learnt-to-code-in-one-year/",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/codeyear.png",
+    "type": "Writeup"
+  },
+  {
+    "title": "Heute ist Pi-Tag: Von 3,14159 bis zum derzeitigen Ende von Pi",
+    "publisher": "NZZ",
+    "url": "https://www.nzz.ch/pi-tag-von-314159-bis-zum-derzeitigen-ende-von-pi-ld.150619",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/piday.png",
+    "type": "Story"
+  },
+  {
+    "title": "Stadtgeflüster",
+    "publisher": "TagesWoche",
+    "url": "http://www.tageswoche.ch/de/2013_41/basel/578320/interaktive-karte-zeigen-sie-uns-die-verborgenen-seiten-von-basel.htm",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/mapyourtown.png",
+    "type": "Story"
+  },
+  {
+    "title": "60 Stunden Facebook",
+    "publisher": "Das Magazin",
+    "url": "http://blog.dasmagazin.ch/2012/05/10/60-stunden-facebook/",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/fb.png",
+    "type": "Story"
+  },
+  {
+    "title": "Tim Hetherington: I really don’t care about photography",
+    "publisher": "Flare",
+    "url": "http://flaremag.de/2011/09/in-memory-of-tim-hetherington-i-really-dont-care-about-photography/",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/hetherington.jpg",
+    "type": "Story"
+  },
+  {
+    "title": "Work at the Guardian Data Blog",
+    "publisher": "The Guardian",
+    "url": "https://www.davidbauer.ch/2013/04/22/datenjournalismus-beim-guardian-ein-augenschein/",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/guardian.png",
+    "type": "Story"
+  },
+  {
+    "title": "The End of Journalism in the Digital Age",
+    "publisher": "Tumblr",
+    "url": "https://endofjournalism.tumblr.com",
+    "img": "https://www.davidbauer.ch/wp-content/themes/db14/_/img/portfolio/tumblr.png",
+    "type": "Project"
+  }
+]

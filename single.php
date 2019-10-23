@@ -5,7 +5,7 @@
 		<nav class="switch newer mobile-hide"><?php next_post_link('%link','«'); ?> </nav>
 		<nav class="switch older mobile-hide"><?php previous_post_link('%link','»'); ?> </nav>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<h3><?php the_title(); ?></h3>
+				<h2><?php the_title(); ?></h2>
 				<p class="date">
 				<?php $u_time = get_the_time('U'); 
 					$u_modified_time = get_the_modified_time('U'); 
@@ -28,21 +28,15 @@
 </div>
 
 <?php get_template_part( 'block', 'about'); ?> 
-
-<?php get_template_part( 'block', 'latest'); ?> 
-
-<?php get_template_part( 'block', 'weeklyfilet'); ?> 
-
-<?php get_template_part( 'block', 'instacurate'); ?> 
-
-<?php get_template_part( 'block', 'dystopia'); ?> 
-
-<?php get_template_part( 'block', 'book'); ?> 
-
-<?php get_template_part( 'block', 'portfolio'); ?> 
-
-<?php get_template_part( 'block', 'connect'); ?> 
-
-<?php get_template_part( 'block', 'map'); ?> 
+	
+	<?php get_template_part( 'block', 'portfolio'); ?> 
+	
+	<?php get_template_part( 'block', 'ydka'); ?> 
+	
+		<?php get_template_part( 'block', 'weeklyfilet'); ?> 
+	
+	<?php get_template_part( 'block', 'book'); ?> 
+	
+	<?php get_template_part( 'block', 'connect'); ?>  
 
 <?php get_footer(); ?>

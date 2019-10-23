@@ -8,15 +8,11 @@
 		<table class="itinerary">
 <tr>
 <td>Usually</td>
-<td>Basel</td>
-</tr>
-<tr>
-<td>8.-12.12.</td>
 <td>Zürich</td>
 </tr>
 <tr>
-<td>15.-20.4.2015</td>
-<td>Perugia</td>
+<td>Regularly</td>
+<td>Basel</td>
 </tr>
 
 </table>

@@ -4,8 +4,8 @@
 	
 		<div class="g g6 gl centered floored">
 		
-		<p class="medium">I write about technology and its effects on humans, markets and society.</p>
-		<a class="external" href="http://www.kurzbefehl.ch">My book, Kurzbefehl</a><a class="external" href="mailto:booking@atelieer.ch">Referat buchen</a>
+		<p class="medium">I think, write – and speak, if you ask me to – about technology and how it changes media and everything else.</p>
+		<a class="external" href="http://www.kurzbefehl.ch">My book, Kurzbefehl</a><a class="external" href="mailto:kontakt@kallio.ch">Booking</a>
 		
 		</div>
 

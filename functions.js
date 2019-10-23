@@ -14,52 +14,6 @@
 /* trigger when page is ready */
 $(document).ready(function (){
 
-/*
-$(function(){
-  $('header').data('size','big');
-});
-
-$(window).scroll(function(){
-  if($(document).scrollTop() > 0)
-{
-    if($('header').data('size') == 'big')
-    {
-        $('header').data('size','small');
-        if ($(window).width() > 468) {$('header').stop().animate({
-            height:'70px'
-        },400);}
-        else {$('header').stop().animate({
-            height:'94px'
-        },400);}
-        $('header p').stop().fadeOut(400);
-        $('.logo').data('size','small');
-        $('.logo').stop().animate({
-            'max-width':'150px'
-        },400);
-    }
-}
-else
-  {
-    if($('header').data('size') == 'small')
-      {
-        $('header').data('size','big');
-        if ($(window).width() > 468) {$('header').stop().animate({
-            height:'120px'
-        },400);}
-        else {
-	        $('header').stop().animate({
-            height:'140px'
-        },400);
-        }
-        $('header p').stop().fadeIn(400);
-        $('.logo').data('size','big');
-        $('.logo').stop().animate({
-            'max-width':'300px'
-        },400);
-      }  
-  }
-});
-*/
 
 // smooth scrolling animation
 $(function() {
@@ -85,16 +39,13 @@ loadPortfolio();
 });
 
 function loadPortfolio() {
-  $.getJSON( "http://www.davidbauer.ch/wp-content/themes/db14/portfolio.json", function( data ) {
+  $.getJSON( "https://www.davidbauer.ch/wp-content/themes/db14/portfolio.json", function( data ) {
   var items = [];
   for (i=0;i < data.length;i++) {
 	  items.push(data[i]);
-	}
-  // push first two items to page
-  $('.pf0').html("<a href='" + items[0].url + "'><img src='" + items[0].img + "' title='" + items[0].title + "' alt='" + items[0].title + "'></a>");
-  $('.pf1').html("<a href='" + items[1].url + "'><img src='" + items[1].img + "' title='" + items[1].title + "' alt='" + items[1].title + "'></a>");	  
+	}  
   
-  rotate(items);
+  browse(items);
   
   // switch between portfolio modes
   $('.browse').click(function(){
@@ -107,6 +58,7 @@ function loadPortfolio() {
 });
 }
 
+/*
 function rotate(items) {
 	var i = 2;
 	setInterval(function(){
@@ -118,15 +70,17 @@ function rotate(items) {
 			i++;
 	},5000);
 }
+*/
 
 function browse(items) {
 	// show all items in smaller grid
 	$('#teasers').html("");
 	for (i=0; i<items.length;i++) {
 		smallimage = items[i].img.replace(".png","-s.png");
-		if (i%6 == 0) {teaser = "<div class='clear'><article class='g g1 gl'><a href='" + items[i].url + "'><img src='" + smallimage + "' title='" + items[i].title + "' alt='" + items[i].title + "'></a></article>";}
-		else {teaser = "</div><article class='g g1'><a href='" + items[i].url + "'><img src='" + smallimage + "' title='" + items[i].title + "' alt='" + items[i].title + "'></a></article>";}
-		$('#teasers').fadeIn(500).append(teaser);	
+		if (i%6 == 0) {teaser = "<div class='clear'></div><article class='g g1 pf1 gl'><a href='" + items[i].url + "'><img src='" + smallimage + "' title='" + items[i].title + "' alt='" + items[i].title + "'></a></article>";}
+		else if (i%2 == 0) {teaser = "<article class='g g1 pf1'><a href='" + items[i].url + "'><img src='" + smallimage + "' title='" + items[i].title + "' alt='" + items[i].title + "'></a></article>";}
+		else {teaser = "<article class='g g1 pf2'><a href='" + items[i].url + "'><img src='" + smallimage + "' title='" + items[i].title + "' alt='" + items[i].title + "'></a></article>";}
+		$('#teasers').append(teaser);	
 	}	
 }
 
@@ -148,17 +102,6 @@ function showcase(items) {
 	});
   });
 
-/* optional triggers
-
-$(window).load(function() {
-	
-});
-
-$(window).resize(function() {
-	
-});
-
-*/
 
 
 })(window.jQuery);

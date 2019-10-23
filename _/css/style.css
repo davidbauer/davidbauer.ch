@@ -1,22 +1,123 @@
 /*  
 Theme Name: db14
-Theme URI: http://www.davidbauer.ch/
+Theme URI: https://www.davidbauer.ch/
 Description: custom built wordpress theme
 Version: 1.0
 Author: David Bauer
-Author URI: http://www.davidbauer.ch/
+Author URI: https://www.davidbauer.ch/
 */
 
 /* Apply a natural box layout model to all elements: http://paulirish.com/2012/box-sizing-border-box-ftw/ */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 
+/* Default this
+-------------------------------------------------------------------------------*/
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}									
+
+article, aside, figure, footer, header, nav, section, details, summary {display: block;}
+
+img,
+object,
+embed {max-width: 100%;}
+
+html {overflow-y: scroll;}
+
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: collapse; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+    white-space: pre; /* CSS2 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+    word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom;}
+.ie7 input[type="checkbox"] {vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit; font: 100%;}
+
+small {font-size: 85%;}
+
+strong {font-weight: bold;}
+
+td, td img {vertical-align: top;} 
+
+/* Make sure sup and sub don't screw with your line-heights
+	gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+/* hand cursor on clickable elements */
+.clickable,
+label, 
+input[type=button], 
+input[type=submit], 
+input[type=file], 
+button {cursor: pointer;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
+
+/* make buttons play nice in IE */
+button {width: auto; overflow: visible;}
+ 
+/* scale images in IE7 more attractively */
+.ie7 img {-ms-interpolation-mode: bicubic;}
+
+/* prevent BG image flicker upon hover */
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+.clearfix:after { clear: both; }  
+.clearfix { zoom: 1; }  
+
+
+
 /* Grid
 -------------------------------------------------------------------------------*/
-/* .container {margin-top: 50px;} */
-.wrapper {width:100%;clear: both;margin: 0px;min-height: 300px;padding: 10px 0;z-index: 1;position: relative;}
+.wrapper {width:100%;clear: both;margin: 0px;padding: 10px 0;z-index: 1;float: left;}
 .content {margin:0px auto;width: 100%;max-width: 1200px;}
-.g {margin: 10px 0 0 1.6%;min-height:50px;float:left;display: block;padding:15px;}
+.g {margin: 5px 0 0 1.6%;min-height:50px;float:left;display: block;padding:15px;}
 .gl {margin-left: 0px;}
 .g6 {width:100%;}
 .g5 {width:83.06%;}
@@ -30,13 +131,13 @@ Author URI: http://www.davidbauer.ch/
 
 /* Header & Navigation
 -------------------------------------------------------------------------------*/
-.header {width:100%;height:120px;background: rgba(88,243,204,0.95);z-index: 100;position: fixed;top:0;left:0;}
+.header {width:100%;background: rgba(88,243,204,0.95);padding-bottom: 5px;}
 .header p {margin-bottom: 3px;}
 
 .logo {width:50%;max-width:300px;margin: 10px auto 2px;border-bottom: 2px solid transparent;}
 a:hover .logo {border-bottom: 2px solid black;}
-.follow {position: fixed;top:10px;right:5px;}
 
+nav ol {margin-bottom: 0;}
 nav li {display: inline-block;padding: 3px;}
 nav li:hover {}
 
@@ -47,22 +148,22 @@ nav li:hover {}
 -------------------------------------------------------------------------------*/
 
 html {background: #FFF;}
-.cover {background: url(http://www.davidbauer.ch/wp-content/themes/db14/_/img/cover.jpg) no-repeat center center fixed;height:550px;background-size: cover;margin-top: -120px;z-index: 1;}
-.glitched {background: url(http://www.davidbauer.ch/wp-content/themes/db14/_/img/cover-glitched.gif) no-repeat center center fixed;height:650px;background-size: cover;}
+.cover {background: url(https://www.davidbauer.ch/wp-content/themes/db14/_/img/cover.jpg) no-repeat center center fixed;height:550px;background-size: cover;margin-top: -120px;z-index: 1;}
+.glitched {background: url(https://www.davidbauer.ch/wp-content/themes/db14/_/img/cover-glitched.gif) no-repeat center center fixed;height:650px;background-size: cover;}
 .whiteish {background: #fff;}
 .whiteish a:hover {color: #fff; background: #333;}
 
-#book {background: url(http://www.davidbauer.ch/wp-content/themes/db14/_/img/book-inside.png) no-repeat center center;height:400px;background-size: cover;color:#fff;}
+#book {background: url(https://www.davidbauer.ch/wp-content/themes/db14/_/img/book-inside.png) no-repeat center center;height:400px;background-size: cover;color:#fff;}
 
-#map {background-color: #333;padding:0;height:420px;position: relative;}
+#about {background: rgba(15,89,113,1);color:#cecece;}
 
 .grey {background: rgba(233,233,233,1);}
 .bordeaux {background:#7E5B7B;}
-.filet {background: #6F3836;color:#fff;}
+.filet {background: #6F3836;color:#fff;min-height: 300px;}
 .lightblue {background:rgba(155,203,227,1);}
-.teal {background: rgba(15,89,113,1);color:#cecece;}
 .rust {background:#6E3D4E;}
 .beige {background:#E8E8DE;}
+.olive {background: #5b8a61;}
 
 footer {background: #333;color:#cecece;font-size: 75%;}
 
@@ -73,20 +174,21 @@ footer {background: #333;color:#cecece;font-size: 75%;}
 
 body,input,textarea,.maptop {font: 100% 'Droid Serif', Georgia, serif;}
 
-h1,h2,h3,h4,h5 {font-family: 'Droid Sans', Helvetica, sans-serif;}
+h1,h2,h3,h4,h5 {font-family: 'Droid Sans', Helvetica, sans-serif;text-transform: uppercase;line-height: 130%;text-align: center;margin: 10px 0;}
 
-h1 {font-size:200%;font-weight: 600;text-transform: uppercase;}
-h2 {font-size:160%;text-transform: uppercase;text-align: center;text-decoration: underline;margin-bottom: 10px;}
-h3 {font-size:140%;margin-bottom: 20px;}
-h4 {font-size:120%;margin-bottom: 15px;}
+h1 {font-size:200%;font-weight: 600;}
+h2 {font-size:160%;}
+h3 {font-size:140%;}
+h4 {font-size:120%;}
 
-.large {font-size:200%;margin-bottom: 0px;}
-.medium {font-size:140%;}
+.large {font-size:180%;margin-bottom: 0px;}
+.medium {font-size:140%;max-width: 700px;margin: 0 auto 10px;}
 .small {font-size:120%;max-width: 700px;margin: 0 auto 10px;}
 
-p, ul, ol {margin-bottom: 1em;line-height: 1.4em;}
+.mainimage {width:60%;}
 
-/* We like off-black for text. */
+p, ul, ol {margin-bottom: 1.5em;line-height: 1.4em;}
+
 body, select, input, textarea {color: #111111;}
 
 a {color: #333;text-decoration: underline;}
@@ -103,7 +205,7 @@ input {
 
 ul li {list-style: none;margin-bottom: 10px;}
 
-/* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
+/* Custom text-selection colors (remove any text shadows: https://twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
 ::selection {background: #fcd700; color: #fff; text-shadow: none;} 
 
@@ -125,14 +227,12 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 .external:hover {background-color: rgba(65,65,65,0.8);color:white;}
 .external:after {content: " →"}
 
+.primarycta {padding:10px;background-color: rgba(197,197,197,0.6);margin: 0 1px 3px 0;color:black;display: inline-block;font-size: 150%;}
+.primarycta:hover {background-color: rgba(65,65,65,0.8);color:white;}
+
 #portfolio article {padding:0;}
 #portfolio article a img {-webkit-filter: grayscale(70%);width: 100%;}
 #portfolio article a:hover img {-webkit-filter: grayscale(0%);}
-
-#mc-embedded-subscribe {padding:11px 20px;background-color: #DE7782;color:#fff;border: none;border-radius: 4px;font-size: 100%;display: inline-block;}
-#mc-embedded-subscribe:hover {background-color: #C76A71;color:white;}
-#mce-EMAIL {padding: 11px 20px;width: 300px;z-index: 10;border:none;display: inline-block;margin: 0 1%;overflow: hidden;}
-#mce-EMAIL:focus {outline-color: #DE7782;}
 
 .showcase, .browse {cursor: pointer;}
 
@@ -140,7 +240,7 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 
 .error {background: rgba(255,242,0,0.6);padding:10px;}
 
-img.portrait {width: 100px;border-radius: 50px;border:4px solid yellow;}
+img.portrait {width: 100px;height:100px;border-radius: 50px;border:4px solid yellow;}
 
 .maptop {background: rgba(255,255,255,0.8);position: absolute;top:60px;left:10px;max-width: 300px;height:320px;z-index: 30 !important;font-size: 16px;}
 
@@ -151,6 +251,15 @@ img.portrait {width: 100px;border-radius: 50px;border:4px solid yellow;}
 	
 a.selector {cursor: pointer;}
 
+#connect li{float:left;display:inline-block;margin:5px;}
+
+#about .g2 {padding-bottom: 0;}
+#about .g2 p {text-align: center;}
+
+.textmarker {
+    border-radius: 1em 0 1em 0;
+    background-image: linear-gradient(-100deg, rgba(255, 224, 0, 0.3), rgba(255, 224, 0, 0.7) 95%, rgba(255, 224, 0, 0.1));
+}
 
 /* Article styles
 -------------------------------------------------------------------------------*/
@@ -158,12 +267,13 @@ a.selector {cursor: pointer;}
 #article {position: relative;}
 
 article p, blockquote {line-height: 165%;letter-spacing: -0.2px;}
-article h3 {font-size: 200%;}
-.main {max-width: 600px;margin: 140px auto 20px;}
+.main {max-width: 600px;margin: 40px auto 20px;}
+.glitched .content {margin: 140px auto 20px;}
 blockquote {margin-bottom: 1em;color:#636363;padding-left:5%;font-style: italic;line-height: 150%;}
 article ol, article ul {margin-left:7%;line-height: 150%;}
-article ul li {margin-bottom: 0;list-style: square;}
+article ul li {list-style: square;}
 
+article .small {font-size: 85%;}
 aside:not(.bigfoot-footnote) {
     color: #6F3836;
     font-size: 140%;
@@ -175,11 +285,11 @@ aside:not(.bigfoot-footnote) {
 }
 
 .switch {font-size: 800%;position: fixed;top:200px;z-index: 0;}
-.switch a {text-decoration: none;color:#f8f8f8;background: transparent !important;}
+.switch a {text-decoration: none !important;color:#f8f8f8;background: transparent !important;}
 .switch a:hover {text-decoration: none;color:#636363;}
 .older {right:10px;}
 .newer {left:10px;}
-.date {font-size: 85%;margin-bottom: 1em;color:grey;}
+.date {font-size: 85%;margin-bottom: 1em;color:grey;text-align: center;}
 .infobox {background-color:#f8f8f8; padding:15px;margin:15px 0;border: 1px solid #636363;}
 
 .fullwidth {width:100%;max-width: 1800px;margin:10px auto;}
@@ -188,134 +298,6 @@ span.newcontent {background:#6E3D4E;color:yellow;font-weight:bold;padding:0px 5p
 
 p.credit {color:#636363;text-align: right;margin-top: -20px;font-size: 0.85em;}
 
-
-/* Icons
--------------------------------------------------------------------------------*/
-
-.icons{margin:0 -5px;padding:1.5em 0;}
-.icons:after{content:"";display:table;clear:both}
-.icons li{float:left;display:inline-block}
-.icons li a{display:inline-block;height:64px;width:64px;background-size:64px 64px;background-position:center center;background-repeat:no-repeat;margin:5px;text-indent:-9999em}
-
-.ic-twitter {
-	background-color: #00aced;
-	background-image: url(http://www.davidbauer.ch/_rsrc/icons/twitter/twitter-64.png);	
-}
-
-.ic-facebook {
-	background-color: #3B5998;
-	background-image: url(http://www.davidbauer.ch/_rsrc/icons/facebook/facebook-64.png);	
-}
-
-.ic-github {
-	background-color: #606060;
-	background-image: url(http://www.davidbauer.ch/_rsrc/icons/github/github-64.png);	
-}
-
-.ic-tumblr {
-	background-color: #2C4762;
-	background-image: url(http://www.davidbauer.ch/_rsrc/icons/tumblr/tumblr-64.png);	
-}
-
-.ic-kippt {
-	background-color: #db3c14;
-	background-image: url(http://www.davidbauer.ch/_rsrc/icons/kippt/kippt-64.png);	
-}
-
-.ic-foursquare {
-	background-color: #2398C9;
-	background-image: url(http://www.davidbauer.ch/_rsrc/icons/foursquare/foursquare-64.png);	
-}
-
-.ic-storify {
-	background-color: #ffffff;
-	background-image: url(http://www.davidbauer.ch/_rsrc/icons/storify/storify-64.png);	
-}
-
-.ic-spotify {
-	background-color: #80B719;
-	background-image: url(http://www.davidbauer.ch/_rsrc/icons/spotify/spotify-64.png);	
-}
-.ic-reddit {
-	background-color: #FF4500;
-	background-image: url(http://www.davidbauer.ch/_rsrc/icons/reddit/reddit-64.png);	
-}
-.ic-googleplus {
-	background-color: #D14836;
-	background-image: url(http://www.davidbauer.ch/_rsrc/icons/googleplus/googleplus-64.png);	
-}
-.ic-quora {
-	background-color: #A82400;
-	background-image: url(http://www.davidbauer.ch/_rsrc/icons/quora/quora-64.png);	
-}
-.ic-medium {
-	background-color: #ffffff;
-	background-image: url(http://www.davidbauer.ch/_rsrc/icons/medium/medium-64.png);	
-}
-.ic-flattr {
-	background-color: #F67C1A;
-	background-image: url(http://www.davidbauer.ch/_rsrc/icons/flattr/flattr-64.png);	
-}
-.ic-speakerdeck {
-	background-color: #396;
-	/*background-image: url(http://www.davidbauer.ch/_rsrc/icons/speakerdeck/speakerdeck-64.png);*/	
-}
-
-.ic-codecademy {
-	background-color: #0088CC;
-	background-image: url(http://www.davidbauer.ch/_rsrc/icons/codecademy/codecademy-64.png);	
-}
-
-.ic-wikipedia {
-	background-color: #000000;
-	background-image: url(http://www.davidbauer.ch/_rsrc/icons/wikipedia/wikipedia-64.png);	
-}
-
-.ic-tageswoche {
-	background-color: #ffffff;
-	background-image: url(http://www.davidbauer.ch/_rsrc/icons/tageswoche/tageswoche-64.png);	
-}
-
-.ic-instagram {
-	background-color: #5681be;
-	background-image: url(http://www.davidbauer.ch/_rsrc/icons/instagram/instagram-64.png);	
-}
-
-/* Glow
--------------------------------------------------------------------------------*/
-
-@-webkit-keyframes glow {
-  from { -webkit-box-shadow: 0 0 10px rgba(255,255,255,0.2); }
-  50% {  -webkit-box-shadow: 0 0 15px rgba(255,255,255,1); }
-  to {  -webkit-box-shadow: 0 0 10px rgba(255,255,255,0.2); }
-}
-
-@-moz-keyframes glow {
-  from { -webkit-box-shadow: 0 0 10px rgba(255,255,255,0.2); }
-  50% {  -webkit-box-shadow: 0 0 15px rgba(255,255,255,1); }
-  to {  -webkit-box-shadow: 0 0 10px rgba(255,255,255,0.2); }
-}
-@-ms-keyframes glow {
-  from { -webkit-box-shadow: 0 0 10px rgba(255,255,255,0.2); }
-  50% {  -webkit-box-shadow: 0 0 15px rgba(255,255,255,1); }
-  to {  -webkit-box-shadow: 0 0 10px rgba(255,255,255,0.2); }
-}
-@-o-keyframes glow {
-  from { -webkit-box-shadow: 0 0 10px rgba(255,255,255,0.2); }
-  50% {  -webkit-box-shadow: 0 0 15px rgba(255,255,255,1); }
-  to {  -webkit-box-shadow: 0 0 10px rgba(255,255,255,0.2); }
-}
-@keyframes glow {
-  from { -webkit-box-shadow: 0 0 10px rgba(255,255,255,0.2); }
-  50% {  -webkit-box-shadow: 0 0 15px rgba(255,255,255,1); }
-  to {  -webkit-box-shadow: 0 0 10px rgba(255,255,255,0.2); }
-}
-
-.glow {
-  -webkit-animation-name: glow;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-}
 
 /* loading spinner
 -------------------------------------------------------------------------------*/ 
@@ -374,316 +356,7 @@ p.credit {color:#636363;text-align: right;margin-top: -20px;font-size: 0.85em;}
   }
 }
 
-/* Headroom styles for hiding header on scroll
--------------------------------------------------------------------------------*/
-.headroom {
-    transition: transform 300ms linear;
-}
-.headroom--pinned {
-    transform: translateY(0%);
-}
-.headroom--unpinned {
-    transform: translateY(-100%);
-}
 
-
-/* Bigfoot styles for footnote tooltips
--------------------------------------------------------------------------------*/
-
-.bigfoot-footnote__button {
-  position: relative;
-  z-index: 5;
-  top: -0.1em;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  display: inline-block;
-  padding: 0.35em;
-  margin: 0 0.1em 0 0.2em;
-  border: none;
-  border-radius: 0.3em;
-  cursor: pointer;
-  background-color: rgba(110, 110, 110, 0.2);
-  -webkit-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
-  font-size: 1rem;
-  line-height: 0;
-  vertical-align: middle;
-  text-decoration: none;
-  font-smoothing: antialiased;
-  -webkit-transition-property: background-color;
-  transition-property: background-color;
-  -webkit-transition-duration: 0.25s;
-  transition-duration: 0.25s;
-}
-
-.bigfoot-footnote__button:hover,
-.bigfoot-footnote__button:focus {
-  outline: none;
-  background-color: rgba(110, 110, 110, 0.5);
-}
-
-.bigfoot-footnote__button:active {
-  background-color: rgba(110, 110, 110, 0.5);
-}
-
-.bigfoot-footnote__button.is-active {
-  background-color: #6e6e6e;
-  -webkit-transition-delay: 0.1s;
-  transition-delay: 0.1s;
-}
-
-.bigfoot-footnote__button:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-.bigfoot-footnote__button__circle {
-  display: inline-block;
-  width: 0.25em;
-  height: 0.25em;
-  margin-right: 0.25em;
-  float: left;
-}
-
-.bigfoot-footnote__button__circle:last-child {
-  margin-right: 0;
-}
-
-.bigfoot-footnote__container {
-  display: inline-block;
-  position: relative;
-  text-indent: 0;
-}
-
-@media not print {
-  .footnote-print-only {
-    display: none !important;
-  }
-}
-
-@media print {
-  .bigfoot-footnote,
-  .bigfoot-footnote__button {
-    display: none !important;
-  }
-}
-
-.bigfoot-footnote {
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  max-width: 90%;
-  margin: 1.96924em 0;
-  background: #fafafa;
-  opacity: 0;
-  border-radius: 0.5em;
-  border: 1px solid #c3c3c3;
-  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-  line-height: 0;
-  -webkit-transition-property: opacity, -webkit-transform;
-  transition-property: opacity, transform;
-  -webkit-transition-duration: 0.25s;
-  transition-duration: 0.25s;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
-  -webkit-transform: scale(0.1) translateZ(0);
-  -ms-transform: scale(0.1) translateZ(0);
-  transform: scale(0.1) translateZ(0);
-  -webkit-transform-origin: 50% 0;
-  -ms-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-}
-
-.bigfoot-footnote.is-positioned-top {
-  top: auto;
-  bottom: 0;
-}
-
-.bigfoot-footnote.is-active {
-  -webkit-transform: scale(1) translateZ(0);
-  -ms-transform: scale(1) translateZ(0);
-  transform: scale(1) translateZ(0);
-  opacity: 0.97;
-}
-
-.bigfoot-footnote.is-bottom-fixed {
-  position: fixed;
-  bottom: 0;
-  top: auto;
-  left: 0;
-  right: auto;
-  -webkit-transform: translateY(100%);
-  -ms-transform: translateY(100%);
-  transform: translateY(100%);
-  width: 100%;
-  margin: 0;
-  border-radius: 0;
-  opacity: 1;
-  border-width: 1px 0 0;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-}
-
-.bigfoot-footnote.is-bottom-fixed.is-active {
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-}
-
-.bigfoot-footnote.is-bottom-fixed .bigfoot-footnote__wrapper {
-  margin: 0 0 0 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  max-width: 100%;
-}
-
-.bigfoot-footnote.is-bottom-fixed .bigfoot-footnote__wrapper,
-.bigfoot-footnote.is-bottom-fixed .bigfoot-footnote__content {
-  border-radius: 0;
-}
-
-.bigfoot-footnote.is-bottom-fixed .bigfoot-footnote__tooltip {
-  display: none;
-}
-
-.bigfoot-footnote.is-scrollable:after {
-  content: '';
-  position: absolute;
-  bottom: 0.3375em;
-  left: 0.3375em;
-  z-index: 14;
-  display: block;
-  height: 0.78125em;
-  width: 0.625em;
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTJweCIgaGVpZ2h0PSIxNXB4IiB2aWV3Qm94PSIwIDAgMTIgMTUiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaW4iPgogICAgPGcgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IkFycm93IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxLjAwMDAwMCwgMS4wMDAwMDApIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiPgogICAgICAgICAgICA8cGF0aCBkPSJNNSwwIEw1LDExLjUiIGlkPSJMaW5lIj48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0wLjUsNy41IEw1LjAyNzY5Mjc5LDEyLjAyNzY5MjgiIGlkPSJMaW5lIj48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik00LjUsNy41IEw5LjAyNzY5Mjc5LDEyLjAyNzY5MjgiIGlkPSJMaW5lLTIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDcuMDAwMDAwLCAxMC4wMDAwMDApIHNjYWxlKC0xLCAxKSB0cmFuc2xhdGUoLTcuMDAwMDAwLCAtMTAuMDAwMDAwKSAiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=");
-  -webkit-background-size: cover;
-  background-size: cover;
-  opacity: 0.1;
-  transition-properties: opacity;
-  -webkit-transition-duration: 0.25s;
-  transition-duration: 0.25s;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
-}
-
-.bigfoot-footnote.is-scrollable .bigfoot-footnote__wrapper:before,
-.bigfoot-footnote.is-scrollable .bigfoot-footnote__wrapper:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  z-index: 12;
-  left: 0;
-}
-
-.bigfoot-footnote.is-scrollable .bigfoot-footnote__wrapper:before {
-  top: -1px;
-  height: 1.1em;
-  border-radius: 0.5em 0.5em 0 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(rgba(250, 250, 250, 0)));
-  background-image: -webkit-linear-gradient(top, #fafafa 50%, rgba(250, 250, 250, 0) 100%);
-  background-image: linear-gradient(to bottom, #fafafa 50%, rgba(250, 250, 250, 0) 100%);
-}
-
-.bigfoot-footnote.is-scrollable .bigfoot-footnote__wrapper:after {
-  bottom: -1px;
-  height: 1.2em;
-  border-radius: 0 0 0.5em 0.5em;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#fafafa), to(rgba(250, 250, 250, 0)));
-  background-image: -webkit-linear-gradient(bottom, #fafafa 50%, rgba(250, 250, 250, 0) 100%);
-  background-image: linear-gradient(to top, #fafafa 50%, rgba(250, 250, 250, 0) 100%);
-}
-
-.bigfoot-footnote.is-scrollable ::-webkit-scrollbar {
-  display: none;
-}
-
-.bigfoot-footnote.is-fully-scrolled:after,
-.bigfoot-footnote.is-fully-scrolled:before {
-  opacity: 0;
-  -webkit-transition-delay: 0;
-  transition-delay: 0;
-}
-
-.bigfoot-footnote__wrapper {
-  position: relative;
-  z-index: 14;
-  width: 22em;
-  display: inline-block;
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
-  overflow: hidden;
-  margin: 0;
-  background-color: #fafafa;
-  border-radius: 0.5em;
-  line-height: 0;
-}
-
-.bigfoot-footnote__content {
-  position: relative;
-  z-index: 8;
-  display: inline-block;
-  max-height: 15em;
-  padding: 1.1em 1.3em 1.2em;
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  background: #fafafa;
-  border-radius: 0.5em;
-  font-smoothing: subpixel-antialiased;
-  line-height: normal;
-}
-
-.bigfoot-footnote__content img {
-  max-width: 100%;
-}
-
-.bigfoot-footnote__content *:last-child {
-  margin-bottom: 0 !important;
-}
-
-.bigfoot-footnote__content *:first-child {
-  margin-top: 0 !important;
-}
-
-.bigfoot-footnote__tooltip {
-  position: absolute;
-  z-index: 12;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-left: -0.65em;
-  width: 1.3em;
-  height: 1.3em;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  background: #fafafa;
-  border: 1px solid #c3c3c3;
-  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-  border-top-left-radius: 0;
-}
-
-.is-positioned-bottom .bigfoot-footnote__tooltip {
-  top: -0.65em;
-}
-
-.is-positioned-top .bigfoot-footnote__tooltip {
-  bottom: -0.65em;
-}
 
 /* Print styles
 -------------------------------------------------------------------------------*/
@@ -699,22 +372,29 @@ p.credit {color:#636363;text-align: right;margin-top: -20px;font-size: 0.85em;}
 .tablet-hide {display: none;}
 aside {margin:0px;}
 #portfolio article a img {-webkit-filter: grayscale(0%);}
-.cover {background: url(http://www.davidbauer.ch/wp-content/themes/db14/_/img/cover.jpg) no-repeat center top fixed;
+.cover {background: url(https://www.davidbauer.ch/wp-content/themes/db14/_/img/cover.jpg) no-repeat center top fixed;
 background-size: 100% auto;}
-.glitched {background: url(http://www.davidbauer.ch/wp-content/themes/db14/_/img/cover-glitched.gif) no-repeat center top fixed;
+.glitched {background: url(https://www.davidbauer.ch/wp-content/themes/db14/_/img/cover-glitched.gif) no-repeat center top fixed;
 background-size: 100% auto;}
+.mainimage {width:80%;}
+.large {font-size:160%;margin-bottom: 0px;}
+.medium {font-size:120%;max-width: 700px;margin: 0 auto 10px;}
+.small {font-size:100%;max-width: 700px;margin: 0 auto 10px;}
+
 }
 
 
 @media screen and (max-width: 480px) {
-.g1,.g2,.g3,.g4,.g5,.g6 {width: 100%;margin:10px 0 0; }
-.mobile-hide{display: none;}
+html {background: rgba(88,243,204,0.95);}
+.g {padding-bottom: 10px;padding-top: 10px;}
+.g1,.g2,.g3,.g4,.g5,.g6 {width: 100%;margin:0; }
+.g1 {width:48%;margin: 1%}
+.mobile-hide {display: none;}
+p, ul, ol {margin-bottom: 1.4em;line-height: 1.4em;}
 aside {display:none;}
-#mce-EMAIL {margin: 0 auto 10px;}
-#portfolio article {min-height: 180px;}	
-.header {height:160px;position: absolute;}
-.teal {margin-top: 140px;}
-article.main {padding: 0 15px !important;margin-top: 170px;}
+.header {position: static;}
+article.main {margin-top: 10px;padding: 0 15px !important;}
+.mainimage {width:100%;}
 }
 
 
